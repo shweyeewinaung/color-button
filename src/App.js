@@ -12,13 +12,15 @@ function App() {
   return (
     <>
       <button 
-        style={{backgroundColor: buttonColor}} 
+        style={ checked ? {backgroundColor: 'grey'} : {backgroundColor: buttonColor} } 
         onClick={()=> setButtonColor(newButtonColor)}
         disabled={checked}
       >
         Change to {newButtonColor}
       </button>
-      <input type="checkbox" value={checked} onClick={()=> setChecked(!checked)}/>
+      
+      <input type="checkbox" value={checked} onClick={()=> setChecked(!checked)} id="disabled-button-checkbox"/>
+      <label htmlFor="disabled-button-checkbox">Disable button</label>
     </>
   );
 }
