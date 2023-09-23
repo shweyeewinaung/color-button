@@ -24,3 +24,6 @@ yarn-error.log*
 
 .vscode
 .eslintcache
+
+/sundae-server/node_modules
+

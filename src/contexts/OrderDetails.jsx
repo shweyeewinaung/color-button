@@ -45,7 +45,7 @@ export function OrderDetailsProvider(props) {
 
   const totals = {
     scoops: calculateTotal("scoops"),
-    topping: calculateTotal("toppings"),
+    toppings: calculateTotal("toppings"),
   };
 
   const value = { optionCounts, totals, updateItemCount, resetOrder };
