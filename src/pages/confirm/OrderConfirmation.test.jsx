@@ -21,6 +21,13 @@ test("for post /order API", async () => {
   const orderNumber = screen.getByText(/loading/i);
   expect(orderNumber).toBeInTheDocument();
 
+  /* await waitFor(async () => {
+    const heading = await screen.findByText("Thank you!");
+    expect(heading).toBeInTheDocument();
+  }); */
+  const heading = await screen.findByRole("heading", { name: "Thank you!" });
+  expect(heading).toBeInTheDocument();
+
   await waitFor(async () => {
     const orderNumber = screen.queryByText(/loading/i);
     expect(orderNumber).not.toBeInTheDocument();
