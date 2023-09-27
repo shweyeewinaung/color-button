@@ -17,6 +17,7 @@ export default function OrderEntry({ updateOrderPhase }) {
         onClick={() => updateOrderPhase("review")}
         variant="dark"
         className="mt-5"
+        disabled={totals.scoops === 0}
       >
         Order
       </Button>
